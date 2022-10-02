@@ -58,4 +58,21 @@ public class DbGrades extends DbHelper{
         return listaPersona;
     }
 
+    public boolean eliminar(int id){
+        boolean correcto = false;
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        try{
+            db.execSQL("DELETE FROM "+ TABLE_GRADES + " WHERE id = '" + id + "' LIMIT 1" );
+            correcto = true;
+        }catch (Exception ex){
+            ex.toString();
+            correcto = false;
+        } finally {
+            db.close();
+        }
+        return correcto;
+    }
+
 }
