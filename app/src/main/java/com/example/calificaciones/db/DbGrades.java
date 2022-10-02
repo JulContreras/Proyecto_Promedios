@@ -21,11 +21,16 @@ public class DbGrades extends DbHelper{
         this.context = context;
     }
 
+    public SQLiteDatabase conexion(){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        return db;
+    }
+
     public long insertarPromedio(String name, String grade){
         long id = 0;
         try {
-            DbHelper dbHelper = new DbHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            SQLiteDatabase db = conexion();
 
             ContentValues values = new ContentValues();
             values.put("nombre", name);
@@ -39,10 +44,9 @@ public class DbGrades extends DbHelper{
 
     public long insertarDescripcion(int ID,String grade, String descripcion){
         long id = 0;
-        try {
-            DbHelper dbHelper = new DbHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
 
+        try {
+            SQLiteDatabase db = conexion();
             ContentValues values = new ContentValues();
 
             values.put("idStudent", ID);
@@ -51,15 +55,17 @@ public class DbGrades extends DbHelper{
 
             id = db.insert(TABLE_DESC, null, values);
         } catch (Exception e){
+
         }
+
         return id;
     }
 
     public ArrayList<Persona> visualizarProm(){
         ArrayList<Persona> listaPersona = new ArrayList<>();
+
         try {
-            DbHelper dbHelper = new DbHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            SQLiteDatabase db = conexion();
 
             Persona persona = null;
             Cursor cursor = null;
@@ -76,15 +82,17 @@ public class DbGrades extends DbHelper{
             }
             cursor.close();
         } catch (Exception e){
+
         }
+
         return listaPersona;
     }
 
     public ArrayList<Descripcion> visualizarDesc(int id){
         ArrayList<Descripcion> listaDescripcion = new ArrayList<>();
+
         try {
-            DbHelper dbHelper = new DbHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            SQLiteDatabase db = conexion();
 
             Descripcion descripcion = null;
             Cursor cursor = null;
@@ -100,14 +108,15 @@ public class DbGrades extends DbHelper{
             }
             cursor.close();
         } catch (Exception e){
+
         }
+
         return listaDescripcion;
     }
 
     public boolean eliminar(int id){
         boolean correcto = false;
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        SQLiteDatabase db = conexion();
 
         try{
             db.execSQL("DELETE FROM " + TABLE_GRADES + " WHERE id = '" + id + "'" );
@@ -124,9 +133,7 @@ public class DbGrades extends DbHelper{
 
     public boolean borrarTabla(){
         boolean correcto = false;
-
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        SQLiteDatabase db = conexion();
 
         try{
             db.execSQL("DELETE FROM " + TABLE_GRADES );

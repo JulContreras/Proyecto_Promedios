@@ -6,12 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.calificaciones.entidades.Persona;
-
 import java.util.ArrayList;
 
 public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.PromedioViewHolder> {
@@ -41,14 +38,11 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Prom
     }
 
     public class PromedioViewHolder extends RecyclerView.ViewHolder {
-
         TextView viewNombre, viewProm;
-
         public PromedioViewHolder(@NonNull View itemView) {
             super(itemView);
             viewNombre = itemView.findViewById(R.id.viewNombre);
             viewProm = itemView.findViewById(R.id.viewProm);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

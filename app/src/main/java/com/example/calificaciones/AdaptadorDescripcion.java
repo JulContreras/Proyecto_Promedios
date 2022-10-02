@@ -4,13 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.calificaciones.entidades.Descripcion;
-import com.example.calificaciones.entidades.Persona;
-
 import java.util.ArrayList;
 
 public class AdaptadorDescripcion extends RecyclerView.Adapter<AdaptadorDescripcion.PromedioViewHolder>{
