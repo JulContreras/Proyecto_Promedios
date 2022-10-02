@@ -110,7 +110,8 @@ public class DbGrades extends DbHelper{
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         try{
-            db.execSQL("DELETE FROM " + TABLE_GRADES + " WHERE id = '" + id + "' LIMIT 1" );
+            db.execSQL("DELETE FROM " + TABLE_GRADES + " WHERE id = '" + id + "'" );
+            db.execSQL("DELETE FROM " + TABLE_DESC + " WHERE idStudent = '" + id + "'" );
             correcto = true;
         }catch (Exception ex){
             ex.toString();

@@ -43,6 +43,7 @@ public class promedio extends AppCompatActivity {
             descripcion.add(Descripcion.getText().toString());
             txt_prom.setText(String.valueOf(promediar(Double.parseDouble(grade.getText().toString()), grades.size())));
             grade.setText("");
+            Descripcion.setText("");
         });
 
         delete.setOnClickListener(view -> {
