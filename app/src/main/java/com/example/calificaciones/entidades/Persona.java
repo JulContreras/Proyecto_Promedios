@@ -1,4 +1,4 @@
-package com.example.calificaciones.db;
+package com.example.calificaciones.entidades;
 
 public class Persona {
 

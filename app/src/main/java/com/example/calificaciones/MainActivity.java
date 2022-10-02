@@ -2,26 +2,25 @@ package com.example.calificaciones;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.calificaciones.db.DbGrades;
-import com.example.calificaciones.db.DbHelper;
-import com.example.calificaciones.db.Persona;
+import com.example.calificaciones.entidades.Persona;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView view1, view2;
+    RecyclerView listaPromedio;
     ArrayList<Persona> lista = new ArrayList<>();
     ArrayList<String> listaNombre = new ArrayList<>();
     ArrayList<String> listaProm = new ArrayList<>();
@@ -33,10 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Button nuevo, limpiar;
         nuevo = findViewById(R.id.btn_Nuevo);
         limpiar = findViewById(R.id.btn_Limpiar);
-        view1 = findViewById(R.id.items_nombre);
-        view2 = findViewById(R.id.items_prom);
-
+        listaPromedio = findViewById(R.id.listaProm);
         DbGrades dbGrades = new DbGrades(MainActivity.this);
+
         nuevo.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, promedio.class);
             startActivity(intent);
@@ -72,21 +70,14 @@ public class MainActivity extends AppCompatActivity {
         listaProm.clear();
     }
 
+    //listaNombre.add(lista.get(i).getNombre());
+    //listaProm.add(lista.get(i).getPromedio());
+
     public void visualizarPromedio(){
         DbGrades dbGrades = new DbGrades(MainActivity.this);
-        lista = dbGrades.visualizarProm();
-
-        vaciarArray();
-
-        for (int i = 0; i<lista.size();i++){
-            listaNombre.add(lista.get(i).getNombre());
-            listaProm.add(lista.get(i).getPromedio());
-        }
-
-        ArrayAdapter adaptador1 = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaNombre);
-        view1.setAdapter(adaptador1);
-        ArrayAdapter adaptador2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaProm);
-        view2.setAdapter(adaptador2);
+        listaPromedio.setLayoutManager(new LinearLayoutManager(this));
+        AdapatadorPersona adapter = new AdapatadorPersona(dbGrades.visualizarProm());
+        listaPromedio.setAdapter(adapter);
     }
 
 

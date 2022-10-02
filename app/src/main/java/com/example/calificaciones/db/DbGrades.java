@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.calificaciones.entidades.Descripcion;
+import com.example.calificaciones.entidades.Persona;
+
 import java.util.ArrayList;
 
 public class DbGrades extends DbHelper{
