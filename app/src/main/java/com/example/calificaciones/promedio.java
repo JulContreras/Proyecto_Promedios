@@ -48,6 +48,7 @@ public class promedio extends AppCompatActivity {
         delete.setOnClickListener(view -> {
             txt_prom.setText("");
             grades.clear();
+            descripcion.clear();
             tot = 0;
             grade.setText("");
         });
@@ -59,7 +60,7 @@ public class promedio extends AppCompatActivity {
             } else {
                 DbGrades dbGrades = new DbGrades(promedio.this);
                 long id = dbGrades.insertarPromedio(name.getText().toString(), String.valueOf(promediar(0,grades.size())));
-
+                Toast.makeText(this, ""+id, Toast.LENGTH_LONG).show();
                 for (int i = 0; i < descripcion.size(); i++) {
                     long idD = dbGrades.insertarDescripcion((int) id ,grades.get(i).toString(), descripcion.get(i));
                     if (idD>0){

@@ -4,6 +4,15 @@ public class Persona {
 
     private String nombre;
     private String promedio;
+    private int ID;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public String getNombre() {
         return nombre;

@@ -9,9 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 
 import com.example.calificaciones.db.DbGrades;
 import com.example.calificaciones.entidades.Persona;
@@ -76,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public void visualizarPromedio(){
         DbGrades dbGrades = new DbGrades(MainActivity.this);
         listaPromedio.setLayoutManager(new LinearLayoutManager(this));
-        AdapatadorPersona adapter = new AdapatadorPersona(dbGrades.visualizarProm());
+        AdaptadorPersona adapter = new AdaptadorPersona(dbGrades.visualizarProm());
         listaPromedio.setAdapter(adapter);
     }
 

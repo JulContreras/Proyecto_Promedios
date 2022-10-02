@@ -68,6 +68,7 @@ public class DbGrades extends DbHelper{
             if (cursor.moveToFirst()){
                 do{
                     persona = new Persona();
+                    persona.setID(cursor.getInt(0));
                     persona.setNombre(cursor.getString(1));
                     persona.setPromedio(cursor.getString(2));
                     listaPersona.add(persona);
@@ -79,7 +80,7 @@ public class DbGrades extends DbHelper{
         return listaPersona;
     }
 
-    public ArrayList<Descripcion> visualizarDesc(){
+    public ArrayList<Descripcion> visualizarDesc(int id){
         ArrayList<Descripcion> listaDescripcion = new ArrayList<>();
         try {
             DbHelper dbHelper = new DbHelper(context);
@@ -88,11 +89,10 @@ public class DbGrades extends DbHelper{
             Descripcion descripcion = null;
             Cursor cursor = null;
 
-            cursor = db.rawQuery("SELECT * FROM "+ TABLE_DESC, null);
+            cursor = db.rawQuery("SELECT * FROM " + TABLE_DESC + " WHERE idStudent = '" + id + "'", null);
             if (cursor.moveToFirst()){
                 do{
                     descripcion = new Descripcion();
-                    descripcion.setID(cursor.getInt(1));
                     descripcion.setGrade(cursor.getString(2));
                     descripcion.setDesc(cursor.getString(3));
                     listaDescripcion.add(descripcion);
