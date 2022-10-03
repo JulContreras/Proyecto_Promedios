@@ -16,7 +16,7 @@ public class promedio extends AppCompatActivity {
     TextView txt_prom;
     EditText name, grade, Descripcion;
     Button add, delete, upload;
-    ArrayList<Double> grades = new ArrayList<Double>();
+    ArrayList<Integer> grades = new ArrayList<Integer>();
     ArrayList<String> descripcion = new ArrayList<String>();
     @Override
 
@@ -33,13 +33,13 @@ public class promedio extends AppCompatActivity {
         Descripcion = findViewById(R.id.desc);
 
         add.setOnClickListener(view -> {
-            if (grade.getText().toString().equals("") && Descripcion.getText().toString().equals("")) {
+            if (grade.getText().toString().equals("") || Descripcion.getText().toString().equals("")) {
                 Toast.makeText(this, "Ingrese una calificacion", Toast.LENGTH_LONG).show();
                 return;
             }
-            grades.add(Double.parseDouble(grade.getText().toString()));
+            grades.add(Integer.parseInt(grade.getText().toString()));
             descripcion.add(Descripcion.getText().toString());
-            txt_prom.setText(String.valueOf(promediar(Double.parseDouble(grade.getText().toString()), grades.size())));
+            txt_prom.setText(String.valueOf(promediar(Integer.parseInt(grade.getText().toString()), grades.size())));
             grade.setText("");
             Descripcion.setText("");
         });
@@ -49,13 +49,12 @@ public class promedio extends AppCompatActivity {
         });
 
         upload.setOnClickListener(view -> {
-            if (name.getText().toString().equals("") && txt_prom.getText().toString().equals("")) {
+            if (name.getText().toString().equals("") || txt_prom.getText().toString().equals("")) {
                 Toast.makeText(this, "Ingrese una calificacion y/o nombre", Toast.LENGTH_LONG).show();
                 return;
             } else {
                 DbGrades dbGrades = new DbGrades(promedio.this);
                 long id = dbGrades.insertarPromedio(name.getText().toString(), String.valueOf(promediar(0,grades.size())));
-                Toast.makeText(this, ""+id, Toast.LENGTH_LONG).show();
                 for (int i = 0; i < descripcion.size(); i++) {
                     long idD = dbGrades.insertarDescripcion((int) id ,grades.get(i).toString(), descripcion.get(i));
                 }
@@ -71,10 +70,9 @@ public class promedio extends AppCompatActivity {
         });
     }
 
-    public double promediar(double nota, int cant) {
+    public int promediar(int nota, int cant) {
         tot = tot + nota;
-        double promedio = tot/cant;
-        return promedio;
+        return (int)tot/cant;
     }
 
     public void delete(){

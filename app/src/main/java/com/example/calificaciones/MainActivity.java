@@ -47,14 +47,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         nuevo.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, promedio.class);
             startActivity(intent);
         });
     }
-
 
     public void visualizarPromedio(){
         DbGrades dbGrades = new DbGrades(MainActivity.this);
@@ -62,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         AdaptadorPersona adapter = new AdaptadorPersona(dbGrades.visualizarProm());
         listaPromedio.setAdapter(adapter);
     }
-
 
     }
 

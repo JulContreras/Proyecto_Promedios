@@ -18,7 +18,6 @@ public class VerDescripciones extends AppCompatActivity {
     RecyclerView listaDescripcion;
     int id = 0;
     Button eliminar;
-    ArrayList<Descripcion> listaDesc = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
