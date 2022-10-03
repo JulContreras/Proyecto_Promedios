@@ -12,14 +12,11 @@
         android:layout_width="254dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:fontFamily="@font/alef_bold"
         android:hint="Ingrese una nueva calificacion"
         android:inputType="number"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.251" />
@@ -28,13 +25,10 @@
         android:id="@+id/txt_nota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alef_bold"
         android:text="Nota:"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189" />
@@ -43,12 +37,10 @@
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alef_bold"
         android:text="Nombre"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.057" />
@@ -58,46 +50,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/alef_bold"
         android:hint="Ingrese su nombre"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.199"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.106" />
 
     <TextView
         android:id="@+id/Prom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alef_bold"
         android:text="Promedio"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_prom"
-        android:layout_width="83dp"
-        android:layout_height="42dp"
-        android:background="@drawable/style_border"
-        android:fontFamily="@font/alef_bold"
+        android:layout_width="191dp"
+        android:layout_height="25dp"
         android:text="0"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/btn_delete"
@@ -109,13 +92,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        app:strokeColor="@color/Background2"
-        android:textColor="@color/Background2"
-        android:textSize="15sp"
-        app:cornerRadius="20dp"
-        style="?attr/materialButtonOutlinedStyle"
-        />
+        app:layout_constraintVertical_bias="0.672" />
 
     <Button
         android:id="@+id/btn_add"
@@ -124,16 +101,10 @@
         android:text="Agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        app:strokeColor="@color/Background2"
-        android:textColor="@color/Background2"
-        android:textSize="15sp"
-        app:cornerRadius="20dp"
-        style="?attr/materialButtonOutlinedStyle"
-        />
+        app:layout_constraintVertical_bias="0.672" />
 
     <Button
         android:id="@+id/btn_upload"
@@ -142,31 +113,22 @@
         android:text="Subir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        app:strokeColor="@color/Background2"
-        android:textColor="@color/Background2"
-        android:textSize="15sp"
-        app:cornerRadius="20dp"
-        style="?attr/materialButtonOutlinedStyle"
-        />
+        app:layout_constraintVertical_bias="0.672" />
 
     <TextView
         android:id="@+id/txt_descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alef_bold"
         android:text="Descripcion"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <EditText
         android:id="@+id/desc"
@@ -175,13 +137,10 @@
         android:ems="10"
         android:hint="Ingrese una descripcion"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.199"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403"
-        android:fontFamily="@font/alef_bold" />
+        app:layout_constraintVertical_bias="0.4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
