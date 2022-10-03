@@ -12,20 +12,19 @@
         android:id="@+id/txt_inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:text="Promedios"
         android:textColor="@color/white"
         android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/listaProm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaProm"
-        android:layout_width="347dp"
-        android:layout_height="208dp"
-        android:layout_marginBottom="428dp"
+        android:layout_width="371dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="332dp"
         android:outlineAmbientShadowColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +35,7 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginEnd="76dp"
 
         android:layout_marginBottom="84dp"
         android:fontFamily="@font/alef_bold"
@@ -47,8 +45,6 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaProm"
-        app:layout_constraintVertical_bias="0.0"
         app:strokeColor="@color/Background2" />
 
     <Button
@@ -56,8 +52,7 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="72dp"
 
         android:layout_marginBottom="84dp"
         android:fontFamily="@font/alef_bold"
@@ -67,10 +62,8 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_Limpiar"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaProm"
-        app:layout_constraintVertical_bias="0.0"
         app:strokeColor="@color/Background2" />
 
 
