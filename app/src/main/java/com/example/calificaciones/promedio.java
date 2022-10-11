@@ -50,7 +50,7 @@ public class promedio extends AppCompatActivity {
 
         upload.setOnClickListener(view -> {
             if (name.getText().toString().equals("") || txt_prom.getText().toString().equals("")) {
-                Toast.makeText(this, "Ingrese una calificacion y/o nombre", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Ingrese su nombre o añada una calificacion al promedio", Toast.LENGTH_LONG).show();
                 return;
             } else {
                 DbGrades dbGrades = new DbGrades(promedio.this);

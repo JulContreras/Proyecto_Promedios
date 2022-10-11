@@ -42,7 +42,7 @@ public class VerDescripciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(VerDescripciones.this);
-                builder.setMessage("¿Desea eliminar TODOS los promedios?")
+                builder.setMessage("¿Desea eliminar este promedio?")
                         .setPositiveButton("SI", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
