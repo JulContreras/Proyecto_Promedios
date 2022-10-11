@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/grade"
-        android:layout_width="254dp"
-        android:layout_height="43dp"
+        android:layout_width="286dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:hint="Ingrese una nueva calificacion"
         android:inputType="number"
@@ -93,16 +93,17 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:text="Subir"
         android:textColor="@color/Background2"
         android:textSize="15sp"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742"
+        app:layout_constraintVertical_bias="1.0"
         app:strokeColor="@color/Background2" />
 
     <Button
@@ -110,6 +111,7 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:text="Borrar"
         android:textColor="@color/Background2"
         android:textSize="15sp"
@@ -119,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742"
+        app:layout_constraintVertical_bias="1.0"
         app:strokeColor="@color/Background2" />
 
     <Button
@@ -127,16 +129,17 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:text="Agregar"
         android:textColor="@color/Background2"
         android:textSize="15sp"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742"
+        app:layout_constraintVertical_bias="1.0"
         app:strokeColor="@color/Background2" />
 
     <TextView
@@ -154,8 +157,8 @@
 
     <EditText
         android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="279dp"
+        android:layout_height="58dp"
         android:ems="10"
         android:hint="Ingrese una descripcion"
         android:inputType="textPersonName"

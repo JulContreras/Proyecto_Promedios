@@ -20,18 +20,18 @@
 
     <Button
         android:id="@+id/btn_eliminarProm"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:text="Eliminar promedio"
+        android:textColor="@color/Background2"
+        android:textSize="15sp"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799"
-        app:strokeColor="@color/Background2"
-        android:textColor="@color/Background2"
-        android:textSize="15sp"
-        app:cornerRadius="20dp"
-        style="?attr/materialButtonOutlinedStyle"
-        />
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="@color/Background2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
